@@ -22,3 +22,8 @@ button {
 img {
 	margin: 20px;
 }
+
+.submit-div {
+  display: table;
+  margin: 0 auto;
+}

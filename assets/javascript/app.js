@@ -1,3 +1,4 @@
+$(document).ready(function() {
 // Array for the giphy buttons
 var animals = ['horse', 'cat', 'dog', 'chicken', 'duck', 'donkey', 'goat', 'cow', 'turkey', 'goose', 'rabbit'];
 
@@ -11,6 +12,26 @@ for (var i = 0; i < animals.length; i++) {
       
     $(".buttons").append(animalBtn);
 }
+
+// Click function to add an animal button
+$('.submit').on('click', function() {
+    var val = $("input[type='text']").val();
+    $("input[type='text']").val('');
+    animals.push(val);
+
+    $(".buttons").empty();
+
+    for (var i = 0; i < animals.length; i++) {
+        console.log(animals[i]);
+        animalBtn = $("<button>");
+        animalBtn.addClass("animal");
+        animalBtn.attr("data-animal", animals[i]);
+        animalBtn.text(animals[i]);
+          
+        $(".buttons").append(animalBtn);
+    }
+    
+})
 
 // AJAX call to GiphyAPI and addings images to DOM
 $(".animal").on("click", function() {
@@ -64,5 +85,7 @@ $(".gif").on("click", function() {
         $(this).attr('src', dataStill);
         $(this).attr('data-state', 'still');
       }
+
+});
 
 });
