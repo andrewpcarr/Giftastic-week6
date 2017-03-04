@@ -4,33 +4,36 @@
 	<meta charset="UTF-8">
 	<title>Giftastic, yo!</title>
 	
+	<!-- Bootstrap link -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- CSS link -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- jQuery link -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
+	<!-- Buttons holder -->
 	<div class="container">
-	<div class='buttons text-center'></div>
+		<div class='buttons text-center'></div>
 	</div>
 	<br><br><br>
+	<!-- Form for adding animals -->
 	<div class="holder">
 		<form>
-			
-				<div class="form-group text-center">
-					<label class="control-label">Add an Animal</label>
-					<input type='text' class="form-control" id="animalName" placeholder="Animal">
-				</div>
-			
+			<div class="form-group text-center">
+				<label class="control-label">Add an Animal</label>
+				<input type='text' class="form-control" id="animalName" placeholder="Animal">
+			</div>
 		</form>
 	</div>
-
+	<!-- Add animal button -->
 	<div class="submit-div">
 		<button type='submit' class="submit btn btn-primary" id="submit">Submit</button>
 	</div>
 	<br>
-
+	<!-- GIFs appear here -->
 	<div class='gifs'></div>
-
+<!-- JavaScript link -->
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

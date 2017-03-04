@@ -33,8 +33,8 @@ $('.submit').on('click', function() {
     
 })
 
-// AJAX call to GiphyAPI and addings images to DOM
-$(".animal").on("click", function() {
+// AJAX call to GiphyAPI and adding images to DOM
+$(".buttons").on("click", '.animal', function() {
 
 	$('.gifs').empty();
 
@@ -72,7 +72,7 @@ $(".animal").on("click", function() {
     });
 
 // Click event to start and pause the gif
-$(".gif").on("click", function() {
+$(".gifs").on("click", '.gif', function() {
 
     var state = $(this).attr('data-state');
     console.log(state);

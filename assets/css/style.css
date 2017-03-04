@@ -27,3 +27,8 @@ img {
   display: table;
   margin: 0 auto;
 }
+
+.gif {
+	height: 150px;
+	width: 150px;
+}
