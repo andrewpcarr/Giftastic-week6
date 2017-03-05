@@ -3,15 +3,19 @@ $(document).ready(function() {
 var animals = ['horse', 'cat', 'dog', 'chicken', 'duck', 'donkey', 'goat', 'cow', 'turkey', 'goose', 'rabbit'];
 
 // Create the initial buttons
-for (var i = 0; i < animals.length; i++) {
-	console.log(animals[i]);
-	animalBtn = $("<button>");
-    animalBtn.addClass("animal");
-    animalBtn.attr("data-animal", animals[i]);
-    animalBtn.text(animals[i]);
-      
-    $(".buttons").append(animalBtn);
+
+function buttons() {
+    for (var i = 0; i < animals.length; i++) {
+    	console.log(animals[i]);
+    	animalBtn = $("<button>");
+        animalBtn.addClass("animal");
+        animalBtn.attr("data-animal", animals[i]);
+        animalBtn.text(animals[i]);
+          
+        $(".buttons").append(animalBtn);
+    }
 }
+buttons();
 
 // Click function to add an animal button
 $('.submit').on('click', function() {
@@ -21,15 +25,7 @@ $('.submit').on('click', function() {
 
     $(".buttons").empty();
 
-    for (var i = 0; i < animals.length; i++) {
-        console.log(animals[i]);
-        animalBtn = $("<button>");
-        animalBtn.addClass("animal");
-        animalBtn.attr("data-animal", animals[i]);
-        animalBtn.text(animals[i]);
-          
-        $(".buttons").append(animalBtn);
-    }
+    buttons();
     
 })
 
